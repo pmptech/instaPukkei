@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">instaPukkei</string>
+    <string name="tab_homepage">Homepage</string>
+    <string name="tab_classified">Classified</string>
+    <string name="tab_shopping">Shopping</string>
+    <string name="tab_travel">Travel</string>
+</resources>
