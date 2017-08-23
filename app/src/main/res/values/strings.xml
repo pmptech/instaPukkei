@@ -4,4 +4,12 @@
     <string name="tab_classified">Classified</string>
     <string name="tab_shopping">Shopping</string>
     <string name="tab_travel">Travel</string>
+    <string name="logo_amazon">Image of Amazon logo</string>
+    <string name="logo_flipkart">Image of Flipkart logo</string>
+    <string name="logo_myntra">Image of Myntra logo</string>
+    <string name="logo_sneapdeal">Image of SnapDeal logo</string>
+    <string name="logo_abof">Image of Abof logo</string>
+    <string name="logo_voonik">Image of Voonik logo</string>
+    <string name="logo_shopclues">Image of Shopclues logo</string>
+    <string name="logo_jabong">Image of Jabong logo</string>
 </resources>

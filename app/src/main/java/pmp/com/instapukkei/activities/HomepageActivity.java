@@ -1,4 +1,4 @@
-package pmp.com.instapukkei;
+package pmp.com.instapukkei.activities;
 
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+
+import pmp.com.instapukkei.utils.Constants;
+import pmp.com.instapukkei.R;
+import pmp.com.instapukkei.tabs.TabClassified;
+import pmp.com.instapukkei.tabs.TabHomepage;
+import pmp.com.instapukkei.tabs.TabShopping;
+import pmp.com.instapukkei.tabs.TabTravel;
+
 
 /**
  * Application runner.
@@ -36,10 +45,9 @@ public class HomepageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        // Create the adapter that will return a fragment for each of the primary sections/tabs of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -56,11 +64,6 @@ public class HomepageActivity extends AppCompatActivity {
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
-        private final static int TAB_NUMBER = 4;
-        private final static String TAB_HOMEPAGE = "instaPukkei";
-        private final static String TAB_CLASSIFIED = "Classified";
-        private final static String TAB_SHOPPING = "Shopping";
-        private final static String TAB_TRAVEL = "Travel";
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -85,20 +88,20 @@ public class HomepageActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // number of tabs.
-            return TAB_NUMBER;
+            return Constants.TAB_NUMBER;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return TAB_HOMEPAGE;
+                    return Constants.TAB_HOMEPAGE;
                 case 1:
-                    return TAB_CLASSIFIED;
+                    return Constants.TAB_CLASSIFIED;
                 case 2:
-                    return TAB_SHOPPING;
+                    return Constants.TAB_SHOPPING;
                 case 3:
-                    return TAB_TRAVEL;
+                    return Constants.TAB_TRAVEL;
                 default:
                     return null;
             }
